@@ -1,5 +1,7 @@
 import puppeteer from "puppeteer";
 
+jest.setTimeout(30000);
+
 describe("Page start", () => {
   let browser;
   let page = null;

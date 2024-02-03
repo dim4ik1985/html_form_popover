@@ -1,5 +1,7 @@
 import puppeteer from "puppeteer";
 
+jest.setTimeout(30000);
+
 describe("Page start", () => {
   let browser;
   let page = null;
@@ -7,7 +9,7 @@ describe("Page start", () => {
 
   beforeEach(async () => {
     browser = await puppeteer.launch({
-      headless: false, // show gui
+      headless: process.env.CI, // show gui
       slowMo: 250,
       devtools: true, // show devTools
     });
