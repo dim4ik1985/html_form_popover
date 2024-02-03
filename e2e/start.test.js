@@ -1,14 +1,11 @@
 import puppeteer from "puppeteer";
 
-jest.setTimeout(30000);
-
 describe("Page start", () => {
   let browser;
   let page = null;
-  // let server = null;
   const baseUrl = "http://localhost:9000";
 
-  beforeAll(async () => {
+  beforeEach(async () => {
     browser = await puppeteer.launch({
       headless: false, // show gui
       slowMo: 250,
@@ -17,7 +14,7 @@ describe("Page start", () => {
     page = await browser.newPage();
   });
 
-  afterAll(async () => {
+  afterEach(async () => {
     await browser.close();
   });
 
