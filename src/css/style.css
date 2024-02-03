@@ -1,1 +1,28 @@
+@import "normalize.css";
 
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form {
+  padding: 10px;
+  margin: 100px 0 0 0;
+}
+
+.form__button {
+  display: inline-block;
+}
+
+.btn-popover {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #da3b4a;
+  background: #da3b4a;
+  color: #ffffff;
+}
